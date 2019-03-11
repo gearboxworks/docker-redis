@@ -1,0 +1,16 @@
+{
+	"state": "production",
+	"organization": "gearboxworks",
+	"name": "redis",
+	"version": "5.0.3",
+	"majorversion": "5.0",
+	"latest": "",
+	"class": "kvstore",
+	"network": "--network gearboxnet",
+	"ports": "-p 6379:6379",
+	"volumes": "",
+	"restart": "--restart no",
+	"args": "",
+	"env": "REDIS_VERSION"
+}
+
