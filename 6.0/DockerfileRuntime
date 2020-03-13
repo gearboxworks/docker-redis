@@ -2,8 +2,8 @@
 
 ################################################################################
 # WARNING: This file has been auto-generated. DO NOT EDIT: WARNING
-# Created on 2020-03-14T09:34:24+1100, using template:DockerfileRuntime.tmpl and json:gearbox.json
-# Referenced Docker container for docker-redis based off gearboxworks/gearbox-base:alpine-3.11 with redis:6.0-alpine overlayed.
+# Created on 2020-03-14T10:34:24+1100, using template:DockerfileRuntime.tmpl and json:gearbox.json
+# Referenced Docker container for docker-redis based off gearboxworks/gearbox-base:alpine-3.11 with redis:6.0-rc-alpine overlayed.
 
 ARG VERSION=6.0
 
@@ -11,7 +11,7 @@ ARG VERSION=6.0
 FROM gearboxworks/gearbox-base:alpine-3.11 as gearbox-base
 
 # 2. Next reference the third party image.
-FROM redis:6.0-alpine
+FROM redis:6.0-rc-alpine
 ARG VERSION
 ARG GEARBOX_ENTRYPOINT
 ARG GEARBOX_ENTRYPOINT_ARGS
@@ -26,7 +26,7 @@ ENV GEARBOX_CONTAINER_NAME "docker-redis"
 ENV GEARBOX_CONTAINER_VERSION ${VERSION}
 ENV GEARBOX_ENTRYPOINT ${GEARBOX_ENTRYPOINT}
 ENV GEARBOX_ENTRYPOINT_ARGS ${GEARBOX_ENTRYPOINT_ARGS}
-LABEL gearbox.json='{"state": "production","organization": "gearboxworks","name": "redis","maintainer": "Gearbox Team <team@gearbox.works>","class": "database","network": "--network gearboxnet","ports": ["6379"],"volumes": "","restart": "--restart no","run": "","args": "redis-server /usr/local/etc/redis.conf","env": {},"refurl": "https://en.wikipedia.org/wiki/Redis","versions": {"6.0": {"majorversion": "","latest": true,"ref": "redis:6.0-alpine","base": "gearboxworks/gearbox-base:alpine-3.11"},"5.0.8": {"majorversion": "5.0","latest": true,"ref": "redis:5.0.8-alpine","base": "gearboxworks/gearbox-base:alpine-3.11"},"4.0.14": {"majorversion": "4.0","latest": false,"ref": "redis:4.0.14-alpine","base": "gearboxworks/gearbox-base:alpine-3.11"}}}'
+LABEL gearbox.json='{"state": "production","organization": "gearboxworks","name": "redis","maintainer": "Gearbox Team <team@gearbox.works>","class": "database","network": "--network gearboxnet","ports": ["6379"],"volumes": "","restart": "--restart no","run": "","args": "redis-server /usr/local/etc/redis.conf","env": {},"refurl": "https://en.wikipedia.org/wiki/Redis","versions": {"6.0": {"majorversion": "","latest": true,"ref": "redis:6.0-rc-alpine","base": "gearboxworks/gearbox-base:alpine-3.11"},"5.0.8": {"majorversion": "5.0","latest": true,"ref": "redis:5.0.8-alpine","base": "gearboxworks/gearbox-base:alpine-3.11"},"4.0.14": {"majorversion": "4.0","latest": false,"ref": "redis:4.0.14-alpine","base": "gearboxworks/gearbox-base:alpine-3.11"}}}'
 LABEL gearbox.version='6.0'
 ENV GEARBOX_VERSION "6.0"
 LABEL container.args="redis-server /usr/local/etc/redis.conf"
@@ -62,8 +62,8 @@ LABEL container.latest="true"
 ENV GEARBOX_LATEST "true"
 LABEL container.majorversion=""
 ENV GEARBOX_MAJORVERSION ""
-LABEL container.ref="redis:6.0-alpine"
-ENV GEARBOX_REF "redis:6.0-alpine"
+LABEL container.ref="redis:6.0-rc-alpine"
+ENV GEARBOX_REF "redis:6.0-rc-alpine"
 
 
 

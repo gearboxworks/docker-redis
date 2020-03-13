@@ -19,7 +19,7 @@
 		"6.0": {
 			"majorversion": "",
 			"latest": true,
-			"ref": "redis:6.0-alpine",
+			"ref": "redis:6.0-rc-alpine",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
 		},
 		"5.0.8": {
