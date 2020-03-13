@@ -1,0 +1,39 @@
+{
+	"state": "production",
+	"organization": "gearboxworks",
+	"name": "redis",
+	"maintainer": "Gearbox Team <team@gearbox.works>",
+	"class": "database",
+	"network": "--network gearboxnet",
+	"ports": [
+		"6379"
+	],
+	"volumes": "",
+	"restart": "--restart no",
+	"run": "",
+	"args": "redis-server /usr/local/etc/redis.conf",
+	"env": {
+	},
+	"refurl": "https://en.wikipedia.org/wiki/Redis",
+	"versions": {
+		"6.0": {
+			"majorversion": "",
+			"latest": true,
+			"ref": "redis:6.0-alpine",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"5.0.8": {
+			"majorversion": "5.0",
+			"latest": true,
+			"ref": "redis:5.0.8-alpine",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		},
+		"4.0.14": {
+			"majorversion": "4.0",
+			"latest": false,
+			"ref": "redis:4.0.14-alpine",
+			"base": "gearboxworks/gearbox-base:alpine-3.11"
+		}
+	}
+}
+
