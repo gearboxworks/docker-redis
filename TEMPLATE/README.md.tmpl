@@ -86,11 +86,23 @@ If {{ .Json.meta.name }} is symlinked to `gb-launch`, then you can drop the `-gb
 
 `./bin/{{ .Json.meta.name }}`
 
-Running commands within the {{ .Json.meta.name }} Gearbox container.
+Running {{ .Json.meta.name }} Gearbox container default command. If a container has a default interactive command, arguments can be supplied without specifying that command.
+
+`./bin/{{ .Json.meta.name }} -flag1 -flag2 variable`
+
+`./bin/gb-launch -gb-name {{ .Json.meta.name }} -gb-version {{ $pv }} -flag1 -flag2 variable`
+
+
+Running alternate commands within the {{ .Json.meta.name }} Gearbox container.
 
 `./bin/{{ .Json.meta.name }} -- ls -l`
 
+`./bin/gb-launch -gb-name {{ .Json.meta.name }} -gb-version {{ $pv }} -- ls -l`
+
 `./bin/{{ .Json.meta.name }} -- ps -eaf`
+
+`./bin/gb-launch -gb-name {{ .Json.meta.name }} -gb-version {{ $pv }} -- ps -eaf`
+
 
 
 ## Method 2: GitHub repo
