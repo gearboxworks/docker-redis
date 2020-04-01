@@ -1,0 +1,55 @@
+[1m[36mGearbox[[37;1m/bin/bash[36m]: [36m# You have entered the docker-redis Docker container.[0m
+[1m[36mGearbox[[37;1m/bin/bash[36m]: [36m# All changes made here outside of /home/gearbox/projects will not be permanent.[0m
+
+[1m[36mGearbox[[37;1m/bin/bash[36m]: [33m# WARNING: Currently the project base directory has NOT been mounted.[0m
+[1m[36mGearbox[[37;1m/bin/bash[36m]: [33m#  - /home/gearbox/projects/default[0m
+
+[1m[36mGearbox[[37;1mgearbox-base[36m]: [37;1mRelease test started.[0m
+2000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/01-base.sh[36m]: [32mGearbox user found.[0m
+2000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/01-base.sh[36m]: [32mGearbox group found.[0m
+[1m[36mGearbox[[37;1mgearbox-bease[36m]: [37;1mRelease test finished.[0m
+[1m[36mGearbox[[37;1mgearbox-base-alpine-3.11[36m]: [37;1mRelease test started.[0m
+2000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/02-release.sh[36m]: [32mGearbox user found.[0m
+2000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/02-release.sh[36m]: [32mGearbox group found.[0m
+[1m[36mGearbox[[37;1mgearbox-base-alpine-3.11[36m]: [37;1mRelease test finished.[0m
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/02-sshd.sh[36m]: [37;1mCheck SSHD[0m
+/proc/20/cmdline:/usr/sbin/sshd
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/gearbox-base/02-sshd.sh[36m]: [32mSSHD running[0m
+[1m[36mGearbox[[37;1mredis[36m]: [37;1mRelease test started.[0m
+2000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/redis/01-base.sh[36m]: [32mGearbox user found.[0m
+2000
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/redis/01-base.sh[36m]: [32mGearbox group found.[0m
+[1m[36mGearbox[[37;1mredis[36m]: [37;1mRelease test finished.[0m
+[1m[36mGearbox[[37;1mredis-4.0.14[36m]: [37;1mRelease test started.[0m
+PID   USER     TIME  COMMAND
+    1 root      0:00 /bin/s6-svscan /etc/gearbox/services
+   17 root      0:00 s6-supervise GearShift
+   18 root      0:00 s6-supervise sshd
+   19 root      0:00 s6-supervise redis
+   20 root      0:00 /usr/sbin/sshd -D -e
+   21 root      0:00 {GearboxGearshif} /bin/bash /usr/local/sbin/GearboxGearshift
+   22 root      0:00 {run} /bin/bash -l ./run
+   35 redis     0:00 redis-server /usr/local/etc/redis.conf
+   46 root      0:00 sleep 99999999
+   47 root      0:00 sshd: gearbox [priv]
+   49 gearbox   0:00 sshd: gearbox@notty
+   50 gearbox   0:00 {run.sh} /bin/bash -l /etc/gearbox/unit-tests/run.sh
+  137 gearbox   0:00 bash -l /etc/gearbox/unit-tests/redis/02-release.sh
+  142 gearbox   0:00 ps -eaf
+[1m[36mGearbox[[37;1mredis-4.0.14[36m]: [37;1mRelease test finished.[0m
+[1m[36mGearbox[[37;1mredis[36m]: [37;1mRelease test started.[0m
+[1m[36mGearbox[[37;1mredis[36m]: [37;1mChecking redis PING:[0m
+PONG
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/redis/02-test.sh[36m]: [32mRedis PING OK.[0m
+[1m[36mGearbox[[37;1mredis[36m]: [37;1mChecking redis SET:[0m
+OK
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/redis/02-test.sh[36m]: [32mRedis SET OK.[0m
+[1m[36mGearbox[[37;1mredis[36m]: [37;1mChecking redis GET:[0m
+gearbox-rulez
+[1m[36mGearbox[[37;1m/etc/gearbox/unit-tests/redis/02-test.sh[36m]: [32mRedis GET OK.[0m
+[1m[36mGearbox[[37;1mredis[36m]: [37;1mRelease test finished.[0m
