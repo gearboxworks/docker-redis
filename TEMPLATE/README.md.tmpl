@@ -86,6 +86,12 @@ If {{ .Json.meta.name }} is symlinked to `gb-launch`, then you can drop the `-gb
 
 `./bin/{{ .Json.meta.name }}`
 
+Running commands within the {{ .Json.meta.name }} Gearbox container.
+
+`./bin/{{ .Json.meta.name }} -- ls -l`
+
+`./bin/{{ .Json.meta.name }} -- ps -eaf`
+
 
 ## Method 2: GitHub repo
 

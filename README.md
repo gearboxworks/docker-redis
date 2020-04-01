@@ -64,13 +64,19 @@ Create, and start the redis Gearbox container. Run a shell.
 
 `./bin/gb-launch -gb-name redis -gb-shell`
 
-Create, and start the redis Gearbox container with version 6.0 and run a shell.
+Create, and start the redis Gearbox container with version 4.0.14 and run a shell.
 
-`./bin/gb-launch -gb-name redis -gb-version 6.0`
+`./bin/gb-launch -gb-name redis -gb-version 4.0.14`
 
 If redis is symlinked to `gb-launch`, then you can drop the `-gb-name` flag.
 
 `./bin/redis`
+
+Running commands within the redis Gearbox container.
+
+`./bin/redis -- ls -l`
+
+`./bin/redis -- ps -eaf`
 
 
 ## Method 2: GitHub repo
