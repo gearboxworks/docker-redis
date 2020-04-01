@@ -38,7 +38,7 @@
 		},
 		"5.0.8": {
 			"majorversion": "5.0",
-			"latest": true,
+			"latest": false,
 			"ref": "redis:5.0.8-alpine",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
 		},
