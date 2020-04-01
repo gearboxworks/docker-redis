@@ -76,6 +76,7 @@ Create, and start the {{ .Json.meta.name }} Gearbox container. Run a shell.
 
 `./bin/gb-launch -gb-name {{ .Json.meta.name }} -gb-shell`
 
+
 {{- $vk := keys .Json.versions }}{{- $pv := index $vk 0 }}
 Create, and start the {{ .Json.meta.name }} Gearbox container with version {{ $pv }} and run a shell.
 
