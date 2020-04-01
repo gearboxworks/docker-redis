@@ -1,7 +1,7 @@
-![Gearbox](https://github.com/gearboxworks/gearbox.github.io/raw/master/Gearbox-100x.png)
+![Gearbox](https://raw.githubusercontent.com/gearboxworks/gearboxworks.github.io/master/assets/images/gearbox-logo.png)
 
 
-# Another [Gearbox](https://github.com/gearboxworks/) Docker container service - redis
+# redis Docker container service for [Gearbox](https://github.com/gearboxworks/)
 This is the repository for the [redis](https://en.wikipedia.org/wiki/Redis) Docker container implemented for [Gearbox](https://github.com/gearboxworks/).
 
 
@@ -12,12 +12,11 @@ GitHub release(latest): ![last-release-date](https://img.shields.io/github/relea
 
 
 ## Supported versions and respective Dockerfiles
-| Service | GitHub Version | Docker Version | Docker Size | Docker Tags | Dockerfile |
-| ------- | -------------- | -------------- | ----------- | ----------- | ---------- |
-| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-4.0.14-green.svg) | ![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/4.0.14) | ![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/4.0.14) | `4.0.14`, `4.0` | _([4.0.14/DockerfileRuntime](https://github.com/gearboxworks/docker-redis/blob/master/4.0/DockerfileRuntime))_ |
-| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-5.0.8-green.svg) | ![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/5.0.8) | ![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/5.0.8) | `5.0.8`, `5.0`, `latest` | _([5.0.8/DockerfileRuntime](https://github.com/gearboxworks/docker-redis/blob/master/5.0/DockerfileRuntime))_ |
-| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-6.0-green.svg) | ![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/6.0) | ![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/6.0) | `6.0`, ``, `latest` | _([6.0/DockerfileRuntime](https://github.com/gearboxworks/docker-redis/blob/master//DockerfileRuntime))_ |
-
+| Service | GitHub Version | Docker Version | Docker Size | Docker Tags |
+| ------- | -------------- | -------------- | ----------- | ----------- |
+| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-4.0.14-green.svg) | ![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/4.0.14) | ![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/4.0.14) | _([`4.0.14`, `4.0`](https://github.com/gearboxworks/docker-redis/blob/master/4.0/DockerfileRuntime))_ |
+| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-5.0.8-green.svg) | ![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/5.0.8) | ![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/5.0.8) | _([`5.0.8`, `5.0`, `latest`](https://github.com/gearboxworks/docker-redis/blob/master/5.0/DockerfileRuntime))_ |
+| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-6.0-green.svg) | ![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/6.0) | ![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/6.0) | _([`6.0`, `latest`](https://github.com/gearboxworks/docker-redis/blob/master//DockerfileRuntime))_ |
 
 
 ## Using this container.
@@ -44,7 +43,7 @@ Simply clone this repository to your local machine
 `make push` - Push already built Docker images to Docker Hub, (only for Gearbox admins). Push all versions from the base directory or specific versions from each directory.
 
 ### Runtime from GitHub repo
-When you `cd` into a version directory you can also perform a few more actions.
+You can either build your container as above, or use it from DockerHub with these commands:
 
 `make start` - Spin up a Docker container with the correct runtime configs.
 
