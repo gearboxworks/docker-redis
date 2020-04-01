@@ -20,11 +20,11 @@ GitHub release(latest): ![last-release-date](https://img.shields.io/github/relea
 
 
 ## About this container.
-A driving force behind Gearbox is to improve the user experience using software, and especially for software developers.
+A driving force behind [Gearbox](https://github.com/gearboxworks/) is to improve the user experience using software, and especially for software developers.
 
 Our vision is to empower developers and other software users to quickly and easily use almost any version of a software service, command line tool or API without without first getting bogged down with installation and configuration.
 
-In other words, our vision for Gearbox users is that software "**just works**".
+In other words, our vision for [Gearbox](https://github.com/gearboxworks/) users is that software "**just works**".
 
 
 ## Using this container.
