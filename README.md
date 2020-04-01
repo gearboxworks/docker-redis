@@ -57,14 +57,18 @@ This allows a devloper to try multiple versions of software as though they were 
 If a container is missing, it will be downloaded and created. Multiple versions can co-exist.
 
 Create, and start the redis Gearbox container.
+
 `./bin/gb-launch -gb-name redis`
 
 Create, and start the redis Gearbox container. Run a shell.
+
 `./bin/gb-launch -gb-name redis -gb-shell`
-Create, and start the redis Gearbox container with version 4.0.14 and run a shell.
-`./bin/gb-launch -gb-name redis -gb-version 4.0.14`
+Create, and start the redis Gearbox container with version 6.0 and run a shell.
+
+`./bin/gb-launch -gb-name redis -gb-version 6.0`
 
 If redis is symlinked to `gb-launch`, then you can drop the `-gb-name` flag.
+
 `./bin/redis`
 
 
