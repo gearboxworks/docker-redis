@@ -14,9 +14,17 @@ GitHub release(latest): ![last-release-date](https://img.shields.io/github/relea
 ## Supported versions and respective Dockerfiles
 | Service | GitHub Version | Docker Version | Docker Size | Docker Tags |
 | ------- | -------------- | -------------- | ----------- | ----------- |
-| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-4.0.14-green.svg) | ![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/4.0.14) | ![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/4.0.14) | _([`4.0.14`, `4.0`](https://github.com/gearboxworks/docker-redis/blob/master/4.0/DockerfileRuntime))_ |
-| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-5.0.8-green.svg) | ![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/5.0.8) | ![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/5.0.8) | _([`5.0.8`, `5.0`, `latest`](https://github.com/gearboxworks/docker-redis/blob/master/5.0/DockerfileRuntime))_ |
-| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-6.0-green.svg) | ![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/6.0) | ![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/6.0) | _([`6.0`, `latest`](https://github.com/gearboxworks/docker-redis/blob/master//DockerfileRuntime))_ |
+| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-4.0.14-green.svg) | [![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/4.0.14)](https://hub.docker.com/repository/docker/gearboxworks/redis) | [![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/4.0.14)](https://hub.docker.com/repository/docker/gearboxworks/redis) | _([`4.0.14`, `4.0`](https://github.com/gearboxworks/docker-redis/blob/master/versions/4.0/DockerfileRuntime))_ |
+| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-5.0.8-green.svg) | [![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/5.0.8)](https://hub.docker.com/repository/docker/gearboxworks/redis) | [![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/5.0.8)](https://hub.docker.com/repository/docker/gearboxworks/redis) | _([`5.0.8`, `5.0`, `latest`](https://github.com/gearboxworks/docker-redis/blob/master/versions/5.0/DockerfileRuntime))_ |
+| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-6.0-green.svg) | [![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/6.0)](https://hub.docker.com/repository/docker/gearboxworks/redis) | [![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/6.0)](https://hub.docker.com/repository/docker/gearboxworks/redis) | _([`6.0`, `latest`](https://github.com/gearboxworks/docker-redis/blob/master/versions//DockerfileRuntime))_ |
+
+
+## About this container.
+A driving force behind Gearbox is to improve the user experience using software, and especially for software developers.
+
+Our vision is to empower developers and other software users to quickly and easily use almost any version of a software service, command line tool or API without without first getting bogged down with installation and configuration.
+
+In other words, our vision for Gearbox users is that software "just works."
 
 
 ## Using this container.
@@ -31,7 +39,7 @@ You can either use it directly from DockerHub or GitHub.
 ### Setup from GitHub repo
 Simply clone this repository to your local machine
 
-`git clone https://github.com/gearboxworks/redis-docker.git`
+`git clone https://github.com/gearboxworks/docker-redis.git`
 
 ### Building from GitHub repo
 `make build` - Build Docker images. Build all versions from the base directory or specific versions from each directory.
