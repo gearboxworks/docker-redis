@@ -41,6 +41,9 @@ It provides three important functional areas, without any Docker container learn
 - Build, update, modify and release Docker images.
 - Acts as a proxy for interactive commands within a Gearbox Docker container.
 
+It also provides a functional SSH daemon for connecting remotely as well as a standard set of common tools and utilities.
+
+
 ### Setup from GitHub repo
 `gb-launch` is currently in beta testing and is included along with all Gearbox Docker repos.
 Once out of beta, it will be included within the Gearbox installation package.
@@ -66,7 +69,7 @@ Create, and start the redis Gearbox container. Run a shell.
 
 Create, and start the redis Gearbox container with version 4.0.14 and run a shell.
 
-`./bin/gb-launch -gb-name redis -gb-version 4.0.14`
+`./bin/gb-launch -gb-name redis -gb-version 4.0.14 -gb-shell`
 
 If redis is symlinked to `gb-launch`, then you can drop the `-gb-name` flag.
 
@@ -81,14 +84,19 @@ Running redis Gearbox container default command. If a container has a default in
 
 Running alternate commands within the redis Gearbox container.
 
-`./bin/redis -- ls -l`
+`./bin/redis -gb-shell -- ls -l`
 
-`./bin/gb-launch -gb-name redis -gb-version 4.0.14 -- ls -l`
+`./bin/gb-launch -gb-name redis -gb-version 4.0.14 -gb-shell -- ls -l`
 
-`./bin/redis -- ps -eaf`
+`./bin/redis -gb-shell -- ps -eaf`
 
-`./bin/gb-launch -gb-name redis -gb-version 4.0.14 -- ps -eaf`
+`./bin/gb-launch -gb-name redis -gb-version 4.0.14 -gb-shell -- ps -eaf`
 
+
+ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
+To show what ports are exported to the host.
+
+`./bin/gb-launch -gb-name redis -gb-list`
 
 
 ## Method 2: GitHub repo
@@ -155,6 +163,9 @@ shell - Run a shell, (/bin/bash), within a Docker container.
 
 ### SSH
 ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
+
+Either use `gb-launch` above or discover the port and SSH directly.
+
 
 ```
 SSH_PORT="$(docker port redis-latest 22/tcp | sed 's/0.0.0.0://')"
