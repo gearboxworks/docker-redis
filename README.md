@@ -1,4 +1,4 @@
-![Gearbox](https://raw.githubusercontent.com/gearboxworks/gearboxworks.github.io/master/assets/images/gearbox-logo.png)
+![Gearbox](https://gearboxworks.github.io/assets/images/gearbox-logo.png)
 
 
 # redis Docker container service for [Gearbox](https://github.com/gearboxworks/)
@@ -67,9 +67,9 @@ Create, and start the redis Gearbox container. Run a shell.
 
 `./bin/gb-launch -gb-name redis -gb-shell`
 
-Create, and start the redis Gearbox container with version 6.0 and run a shell.
+Create, and start the redis Gearbox container with version 5.0.8 and run a shell.
 
-`./bin/gb-launch -gb-name redis -gb-version 6.0 -gb-shell`
+`./bin/gb-launch -gb-name redis -gb-version 5.0.8 -gb-shell`
 
 If redis is symlinked to `gb-launch`, then you can drop the `-gb-name` flag.
 
@@ -79,18 +79,18 @@ Running redis Gearbox container default command. If a container has a default in
 
 `./bin/redis -flag1 -flag2 variable`
 
-`./bin/gb-launch -gb-name redis -gb-version 6.0 -flag1 -flag2 variable`
+`./bin/gb-launch -gb-name redis -gb-version 5.0.8 -flag1 -flag2 variable`
 
 
 Running alternate commands within the redis Gearbox container.
 
 `./bin/redis -gb-shell -- ls -l`
 
-`./bin/gb-launch -gb-name redis -gb-version 6.0 -gb-shell -- ls -l`
+`./bin/gb-launch -gb-name redis -gb-version 5.0.8 -gb-shell -- ls -l`
 
 `./bin/redis -gb-shell -- ps -eaf`
 
-`./bin/gb-launch -gb-name redis -gb-version 6.0 -gb-shell -- ps -eaf`
+`./bin/gb-launch -gb-name redis -gb-version 5.0.8 -gb-shell -- ps -eaf`
 
 
 ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
