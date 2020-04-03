@@ -1,7 +1,7 @@
 
 ################################################################################
 # WARNING: This file has been auto-generated. DO NOT EDIT: WARNING
-# Created on 2020-04-01T16:00:25+1100, using template:DockerfileRuntime.tmpl and json:gearbox.json
+# Created on 2020-04-03T14:39:17+1100, using template:DockerfileRuntime.tmpl and json:gearbox.json
 # Referenced Docker container for docker-redis based off gearboxworks/gearbox-base:alpine-3.11 with redis:6.0-rc-alpine overlayed.
 
 ARG VERSION=6.0
