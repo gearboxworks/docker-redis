@@ -15,8 +15,8 @@ GitHub release(latest): ![last-release-date](https://img.shields.io/github/relea
 | Service | GitHub Version | Docker Version | Docker Size | Docker Tags |
 | ------- | -------------- | -------------- | ----------- | ----------- |
 | [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-4.0.14-green.svg) | [![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/4.0.14)](https://hub.docker.com/repository/docker/gearboxworks/redis) | [![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/4.0.14)](https://hub.docker.com/repository/docker/gearboxworks/redis) | _([`4.0.14`, `4.0`](https://github.com/gearboxworks/docker-redis/blob/master/versions/4.0.14/DockerfileRuntime))_ |
-| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-5.0.8-green.svg) | [![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/5.0.8)](https://hub.docker.com/repository/docker/gearboxworks/redis) | [![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/5.0.8)](https://hub.docker.com/repository/docker/gearboxworks/redis) | _([`5.0.8`, `5.0`](https://github.com/gearboxworks/docker-redis/blob/master/versions/5.0.8/DockerfileRuntime))_ |
-| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-6.0-green.svg) | [![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/6.0)](https://hub.docker.com/repository/docker/gearboxworks/redis) | [![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/6.0)](https://hub.docker.com/repository/docker/gearboxworks/redis) | _([`6.0`, `latest`](https://github.com/gearboxworks/docker-redis/blob/master/versions/6.0/DockerfileRuntime))_ |
+| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-5.0.9-green.svg) | [![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/5.0.9)](https://hub.docker.com/repository/docker/gearboxworks/redis) | [![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/5.0.9)](https://hub.docker.com/repository/docker/gearboxworks/redis) | _([`5.0.9`, `5.0`](https://github.com/gearboxworks/docker-redis/blob/master/versions/5.0.9/DockerfileRuntime))_ |
+| [redis](https://en.wikipedia.org/wiki/Redis) | ![redis](https://img.shields.io/badge/redis-6.0.1-green.svg) | [![Docker Version)](https://img.shields.io/docker/v/gearboxworks/redis/6.0.1)](https://hub.docker.com/repository/docker/gearboxworks/redis) | [![Docker Size](https://img.shields.io/docker/image-size/gearboxworks/redis/6.0.1)](https://hub.docker.com/repository/docker/gearboxworks/redis) | _([`6.0.1`, `latest`](https://github.com/gearboxworks/docker-redis/blob/master/versions/6.0.1/DockerfileRuntime))_ |
 
 
 ## About this container.
@@ -33,8 +33,8 @@ However, due to the flexability of Gearbox, it can be used outside of this frame
 
 There are three methods:
 
-## Method 1: Using gb-launch
-`gb-launch` is a tool specifically designed to interact with a Gearbox Docker container.
+## Method 1: Using launch
+`launch` is a tool specifically designed to interact with a Gearbox Docker container.
 
 It provides three important functional areas, without any Docker container learning curve:
 - Allows control over Gearbox Docker containers: stop, start, create, remove.
@@ -43,60 +43,63 @@ It provides three important functional areas, without any Docker container learn
 
 It also provides a functional SSH daemon for connecting remotely as well as a standard set of common tools and utilities.
 
+Further `launch` documentation can be [found here](https://github.com/gearboxworks/docker-template/blob/master/LAUNCH.md).
 
-### Setup from GitHub repo
-`gb-launch` is currently in beta testing and is included along with all Gearbox Docker repos.
+### Download launch
+`launch` is currently in beta testing and is included along with all Gearbox Docker repos.
 Once out of beta, it will be included within the Gearbox installation package.
 
-For now, simply clone this repository to your local machine.
+For now, simply download the standalone `launch` binary for your O/S.
+- [Mac OSX 64bit](https://github.com/gearboxworks/docker-template/raw/master/bin/Darwin/launch)
+- [Linux 64bit](https://github.com/gearboxworks/docker-template/raw/master/bin/Linux/launch)
+- [Windows 64bit](https://github.com/gearboxworks/docker-template/raw/master/bin/Windows/launch)
 
-`git clone https://github.com/gearboxworks/docker-redis.git`
 
-### Running gb-launch
-There are many ways to call gb-launch, either directly or indirectly.
+### Running launch
+There are many ways to call launch, either directly or indirectly.
 Additionally, all host environment variables will be imported into the container seamlessly.
 This allows a devloper to try multiple versions of software as though they were installed locally.
 
 If a container is missing, it will be downloaded and created. Multiple versions can co-exist.
 
-Create, and start the redis Gearbox container.
+Install, create, and start the redis Gearbox container.
 
-`./bin/gb-launch -gb-name redis`
+`./launch install redis`
 
 Create, and start the redis Gearbox container. Run a shell.
 
-`./bin/gb-launch -gb-name redis -gb-shell`
+`./launch shell redis`
 
-Create, and start the redis Gearbox container with version 4.0.14 and run a shell.
+Create, and start the redis Gearbox container with version 5.0.9 and run a shell.
 
-`./bin/gb-launch -gb-name redis -gb-version 4.0.14 -gb-shell`
+`./launch shell redis:5.0.9`
 
-If redis is symlinked to `gb-launch`, then you can drop the `-gb-name` flag.
+`./launch shell redis:5.0.9 ls -l`
 
-`./bin/redis`
+`./launch shell redis:5.0.9 ps -eaf`
+
+
+### Available commands
+If redis is symlinked to `launch`, then the Gearbox container will be determined automatically and the default command will be run.
+All available commands for a Gearbox container will be automatically symlinked upon installation.
+
+`./redis`
 
 Running redis Gearbox container default command. If a container has a default interactive command, arguments can be supplied without specifying that command.
 
-`./bin/redis -flag1 -flag2 variable`
+`./redis -flag1 -flag2 variable`
 
-`./bin/gb-launch -gb-name redis -gb-version 4.0.14 -flag1 -flag2 variable`
+`./launch redis:5.0.9 -flag1 -flag2 variable`
 
-
-Running alternate commands within the redis Gearbox container.
-
-`./bin/redis -gb-shell -- ls -l`
-
-`./bin/gb-launch -gb-name redis -gb-version 4.0.14 -gb-shell -- ls -l`
-
-`./bin/redis -gb-shell -- ps -eaf`
-
-`./bin/gb-launch -gb-name redis -gb-version 4.0.14 -gb-shell -- ps -eaf`
+Gearbox containers may have multiple executables that can be run. The redis Gearbox container has the following available commands:
+- The default command will execute `` within the container.
 
 
+### Remote connection
 ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
-To show what ports are exported to the host.
+To show what ports are exported to the host, use the following command.
 
-`./bin/gb-launch -gb-name redis -gb-list`
+`./launch list redis`
 
 
 ## Method 2: GitHub repo
@@ -164,7 +167,7 @@ shell - Run a shell, (/bin/bash), within a Docker container.
 ### SSH
 ssh - All [Gearbox](https://github.com/gearboxworks/) containers have a running SSH daemon. So you can connect remotely.
 
-Either use `gb-launch` above or discover the port and SSH directly.
+Either use `launch` above or discover the port and SSH directly.
 
 
 ```
