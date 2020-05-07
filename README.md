@@ -70,13 +70,13 @@ Create, and start the redis Gearbox container. Run a shell.
 
 `./launch shell redis`
 
-Create, and start the redis Gearbox container with version 5.0.9 and run a shell.
+Create, and start the redis Gearbox container with version 4.0.14 and run a shell.
 
-`./launch shell redis:5.0.9`
+`./launch shell redis:4.0.14`
 
-`./launch shell redis:5.0.9 ls -l`
+`./launch shell redis:4.0.14 ls -l`
 
-`./launch shell redis:5.0.9 ps -eaf`
+`./launch shell redis:4.0.14 ps -eaf`
 
 
 ### Available commands
@@ -89,7 +89,7 @@ Running redis Gearbox container default command. If a container has a default in
 
 `./redis -flag1 -flag2 variable`
 
-`./launch redis:5.0.9 -flag1 -flag2 variable`
+`./launch redis:4.0.14 -flag1 -flag2 variable`
 
 Gearbox containers may have multiple executables that can be run. The redis Gearbox container has the following available commands:
 - The default command will execute `` within the container.
