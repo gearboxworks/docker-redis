@@ -46,7 +46,7 @@
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
 		},
 		"6.0.1": {
-			"majorversion": "",
+			"majorversion": "6.0",
 			"latest": true,
 			"ref": "redis:6.0.1-alpine",
 			"base": "gearboxworks/gearbox-base:alpine-3.11"
